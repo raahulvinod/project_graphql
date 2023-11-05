@@ -10,8 +10,6 @@ const Clients = () => {
 
   if (loading) return <Spinner />;
   if (error) return <p>something went wrong</p>;
-  console.log(data);
-
   return (
     <>
       {!loading && !error && (
