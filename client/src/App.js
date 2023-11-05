@@ -1,9 +1,10 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import Header from './components/Header';
+import Clients from './components/Clients';
 
 const client = new ApolloClient({
-  uri: process.env.APOLLO_SERVER_URI,
+  uri: process.env.REACT_APP_SERVER_URI,
   cache: new InMemoryCache(),
 });
 
@@ -12,7 +13,9 @@ function App() {
     <>
       <ApolloProvider client={client}>
         <Header />
-        <div className="container"></div>
+        <div className="container">
+          <Clients />
+        </div>
       </ApolloProvider>
     </>
   );
